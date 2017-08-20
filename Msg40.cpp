@@ -4817,7 +4817,7 @@ void hashExcerpt ( Query *q ,
 			// . avoid "to use..." "to do..." "to make..." annoying
 			// . "to" has score 1, "and" has score 2, "of" is 3,
 			// . "the" is 4, "this" is 5
-			if ( wi->m_isCommonWord <= 5 ) continue;
+			if ( wi->m_proxScore <= 5 ) continue;
 			// cannot start with any common word,unless capitalized
 			if ( is_lower_a(wp[i][0]) ) continue;
 		}
